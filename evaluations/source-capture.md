@@ -3,7 +3,12 @@
 - **source_status:** accessible
 - **data da captura:** 2026-08-06
 - **URL exata do editor/fonte:** https://chatgpt.com/gpts/editor/g-6a7259cd04a48191a3bb1c2833b0ca2f
-- **nome no editor:** Agente Reforma — Sala Secreta (até 07/08)
+- **nome de distribuição da cópia no catálogo:** Agente da Reforma Tributária | Oficial (copy)
+- **nome histórico observado no editor:** Agente Reforma — Sala Secreta (até 07/08)
+- **proveniência de identidade:** os dois nomes apontam para o mesmo GPT ID
+  `g-6a7259cd04a48191a3bb1c2833b0ca2f`, o mesmo agente lógico
+  `ac.reforma-tributaria` e o mesmo repositório canônico; “Sala Secreta” foi
+  apenas um nome temporário de exibição, não um segundo agente.
 - **distribuição observada:** publicado — qualquer pessoa com um link
 - **responsável:** Academia-de-Contadores
 - **método de recuperação:** inspeção somente leitura da configuração no editor autenticado; nenhuma conversa pública foi usada.
