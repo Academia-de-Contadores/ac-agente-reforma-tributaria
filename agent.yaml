@@ -10,9 +10,9 @@ catalog:
   url: https://github.com/Academia-de-Contadores/academia-contadores-agent-catalog
 source_capture:
   status: accessible
-  captured_at: 2026-08-06
+  captured_at: 2026-08-22
   source_url: https://chatgpt.com/gpts/editor/g-6a7259cd04a48191a3bb1c2833b0ca2f
-  record: evaluations/source-capture.md
+  record: knowledge/live-2026-08-22/MANIFEST.md
 objectives:
   mission: objectives/mission.md
   metrics: objectives/success-metrics.md
@@ -21,7 +21,7 @@ identity:
   soul: identity/soul.md
   definition: identity/identity.md
 instructions:
-  system: instructions/system.md
+  system: instructions/current-live-2026-08-22.md
   guardrails: instructions/guardrails.md
 skills: []
 connectors:
