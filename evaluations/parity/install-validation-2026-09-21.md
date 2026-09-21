@@ -175,3 +175,30 @@ nenhum arquivo histórico foi alterado nesta task.
 A validação não instala uma Action, não comprova serviço remoto e não certifica
 atualidade normativa. Não houve consulta ao GPT online, envio a terceiros,
 publicação, push, mudança de lifecycle nem criação de scripts.
+
+## Verificação pós-review final
+
+Esta seção registra a correção documental posterior, concluída em
+`2026-09-21T05:24:13Z`, sem reescrever os hashes, resultados ou condições
+históricas das seções anteriores. O README instalado do conector foi marcado
+como histórico, passou a apontar para o contrato e o caso de regressão atuais e
+foi sincronizado byte a byte com a origem. Nenhum arquivo de instrução,
+Knowledge ou schema foi alterado.
+
+| Verificação pós-review | Resultado observado |
+| --- | --- |
+| `quick_validate.py` na origem | exit 0, `Skill is valid!` |
+| `quick_validate.py` na instalação | exit 0, `Skill is valid!` |
+| Allowlist e `cmp` de todos os caminhos/conteúdos | PASS 53/53; nenhum extra ou ausente |
+| Symlinks e `.gitkeep` na instalação | 0 e 0 |
+| SHA-256 de `connectors/rag/README.md` na origem e instalação | MATCH `11fe985e121209e2bb4442cf6c9a5eda2d762cb62e930db8bd7cfac1d572ef7a` |
+| SHA-256 do inventário instalado recalculado pelo comando documentado acima | `653c6ea8b23c4497b557059454c9b387e9b92b5672e6552f2b5a11e7bed857af` |
+| Instruções, Knowledge e dois schemas versus base `3bd551813eb142acc7f8ed7f5fd34768d35d37e0` | sem diff |
+| `bash scripts/validate-agent-repo.sh` | exit 0, `agent repository validation passed` |
+| `bash tests/validate-agent-repo.test.sh` | exit 0, `validate-agent-repo tests passed` |
+| `git diff --check` | exit 0 |
+
+O inventário continua com **53 arquivos regulares**. O hash novo representa a
+instalação pós-review; os hashes anteriores continuam sendo a evidência das
+capturas candidata e promovida nos momentos em que foram produzidas. Avaliações
+permanecem fora do runtime. Push, pull request e merge não foram executados.

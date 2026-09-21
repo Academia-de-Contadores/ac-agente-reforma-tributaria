@@ -7,7 +7,7 @@ instruções — de suas capacidades, Knowledge, integrações e traduções par
 plataformas. O Git é a fonte de verdade: a plataforma de execução recebe uma
 reconstrução do conteúdo versionado, nunca o contrário sem revisão.
 
-## Usar a skill 0.2.0 candidata
+## Usar a skill 0.2.0 validada
 
 Invoque `$ac-reforma-tributaria` com a pergunta técnica. O perfil padrão
 `restored-technical` usa o acervo local e entrega explicações, triagem, cenários
@@ -42,13 +42,25 @@ configurada no GPT. Este pacote não instala MCP nem contém segredos.
    inventário e hashes dos arquivos distribuíveis, confirmando oito originais,
    vinte source-package e dois schemas. Verifique ausência de symlinks.
 5. Teste a invocação no Codex a partir do destino. Registre perfil, fontes,
-   lacunas e resultados integrais dos casos; promoção para `validated` depende
-   de avaliação independente, não apenas da validação estrutural.
+   lacunas e resultados integrais dos casos. A release `0.2.0` já está
+   `validated`; mudanças futuras que possam alterar comportamento exigem nova
+   avaliação independente, não apenas validação estrutural.
 
 `agent.yaml` acompanha o pacote como manifesto de proveniência. Suas referências
 em `source_capture` e `evaluations` apontam para evidências do repositório que são
 deliberadamente excluídas da instalação; não são dependências de runtime.
 As instruções de operação partem de `SKILL.md` e seus perfis/referências.
+
+## Estado dos gates e publicação
+
+A release `0.2.0` concluiu instalação seletiva 53/53, forward test local 7/7,
+Gate A 2/2, Gate B 5/5, verificação de fontes/originais e revisão independente
+sem achados Critical/Important. Esses gates sustentam o lifecycle `validated` e
+estão documentados em `evaluations/parity/`.
+
+Push, pull request e merge são gates externos posteriores e continuam pendentes.
+O estado `validated` não afirma que a branch já foi publicada ou integrada a
+`main`.
 
 ## Manutenção do pacote
 

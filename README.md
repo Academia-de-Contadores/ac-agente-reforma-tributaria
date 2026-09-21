@@ -5,7 +5,7 @@
 | ID | `ac.reforma-tributaria` |
 | Skill | `$ac-reforma-tributaria` |
 | Versão | `0.2.0` |
-| Lifecycle | `candidate` |
+| Lifecycle | `validated` |
 
 ## Propósito
 
@@ -23,8 +23,14 @@ Esta distribuição não reabre nem altera o GPT.
 O entrypoint é [SKILL.md](SKILL.md). Os perfis técnicos podem explicar, organizar
 hipóteses e propor próximos passos sem a Action. Não fecham cálculo, regime ou
 classificação sem dados e fontes suficientes. Os dois schemas preservados não
-comprovam integração ativa. A versão é candidata; instalação e testes funcionais
-independentes ainda são gates de validação.
+comprovam integração ativa. A versão `0.2.0` está `validated`: passou pela
+instalação seletiva (53/53 arquivos), pelo forward test local (7/7), pelos
+Gates A (2/2) e B (5/5), pela verificação de fontes/originais e pela revisão
+independente com zero achados Critical/Important. As evidências estão em
+`evaluations/parity/`.
+
+Essa validação local não é publicação: o push da branch, a abertura do pull
+request e o merge continuam pendentes e não foram executados neste repositório.
 
 ## Instalação seletiva
 
