@@ -1,5 +1,32 @@
 # Ficha de captura da fonte
 
+## Estado atual reconciliado — 2026-09-21
+
+O editor permanece acessível e publicado para qualquer pessoa com um link,
+mas o acesso técnico está **encerrado (`expired/closed`)**. A inspeção autenticada
+somente leitura confirmou **zero arquivos de Knowledge e zero Actions
+configuradas**; nenhum prompt foi enviado ou configuração alterada.
+
+As instruções integrais coincidem por SHA-256 normalizado com
+`instructions/current-live-2026-08-22.md` (**MATCH**). Nome e distribuição
+coincidem com a ficha inicial; descrição, starters, modelo e capacidades
+apresentam **GAP** versus aquela captura técnica. O modelo no seletor é
+`Thinking 5.6`, enquanto a prévia mostra `GPT-5.6 Sol`; a divergência de rótulos
+foi preservada na evidência, sem inferir identificador de runtime.
+
+Os oito originais continuam preservados com hashes **MATCH 8/8**. Os vinte
+arquivos de `knowledge/source-package/` foram inventariados localmente. Os dois
+schemas de `searchDayRagCorpus` também têm hashes **MATCH** com suas referências
+históricas e são opcionais apenas para restauração futura. Nenhum desses ativos
+locais comprova presença no GPT atual. Disponibilidade da Action não foi testada.
+
+Ver [auditoria integral com MATCH/GAP por campo](live-editor-audit-2026-09-21.md)
+e [manifesto local](../knowledge/MANIFEST.md). O lifecycle permanece
+`source-capture`. As seções seguintes preservam o histórico e não descrevem a
+configuração atual.
+
+## Captura histórica — 2026-08-06
+
 - **source_status:** accessible
 - **data da captura:** 2026-08-06
 - **URL exata do editor/fonte:** https://chatgpt.com/gpts/editor/g-6a7259cd04a48191a3bb1c2833b0ca2f
@@ -59,3 +86,11 @@ wrapper de plataforma; o comportamento substantivo foi preservado.
 - `knowledge/MANIFEST.md` registra nome, tamanho e SHA-256 de cada arquivo.
 - Esta atualização substitui, para o estado atual do repositório, as observações históricas acima que diziam que os corpos dos anexos não haviam sido recuperados.
 - Tokens, credenciais, conversas de usuários, dados de clientes, logs e índices externos continuam fora do repositório.
+
+## Atualização — captura do encerramento (2026-08-22)
+
+`instructions/current-live-2026-08-22.md` registra o aviso integral de encerramento
+do acesso temporário e encaminhamento ao Lucas. O manifesto
+`knowledge/live-2026-08-22/MANIFEST.md` registra zero anexos ativos. Essa captura
+substituiu o comportamento técnico de `instructions/system.md` como baseline
+online, preservando as instruções técnicas e anexos anteriores como histórico.

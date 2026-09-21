@@ -11,8 +11,23 @@ catalog:
 source_capture:
   status: accessible
   captured_at: 2026-08-22
+  verified_at: 2026-09-21
+  source_state: expired/closed
   source_url: https://chatgpt.com/gpts/editor/g-6a7259cd04a48191a3bb1c2833b0ca2f
   record: knowledge/live-2026-08-22/MANIFEST.md
+  audit: evaluations/live-editor-audit-2026-09-21.md
+  active_knowledge_files: 0
+  configured_actions: 0
+  historical_assets:
+    original_files: 8
+    source_package_files: 20
+    manifest: knowledge/MANIFEST.md
+    action_status: historical-optional
+    action_configured_online: false
+    action_health_checked: false
+    action_schemas:
+      - connectors/actions/searchDayRagCorpus/openapi.builder-capture.yaml
+      - connectors/actions/searchDayRagCorpus/openapi.yaml
 objectives:
   mission: objectives/mission.md
   metrics: objectives/success-metrics.md
@@ -25,9 +40,11 @@ instructions:
   guardrails: instructions/guardrails.md
 skills: []
 connectors:
+  # Referência histórica/opcional; não representa Action configurada no GPT atual.
   - connectors/rag/README.md
 evaluations:
   - evaluations/source-capture.md
+  - evaluations/live-editor-audit-2026-09-21.md
   - evaluations/scenarios/T1.md
   - evaluations/scenarios/T2.md
   - evaluations/scenarios/T3.md
