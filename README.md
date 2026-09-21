@@ -3,24 +3,49 @@
 | Campo | Valor |
 | --- | --- |
 | ID | `ac.reforma-tributaria` |
-| Versão | `0.1.0` |
-| Lifecycle | `source-capture` |
+| Skill | `$ac-reforma-tributaria` |
+| Versão | `0.2.0` |
+| Lifecycle | `candidate` |
 
 ## Propósito
 
-Oferece acesso temporário, até 07/08/2026, para participantes da Sala Secreta,
-com consulta ao corpus RAG e respostas revisáveis.
+Restaura no Codex a orientação consultiva da Day sobre Reforma Tributária usando
+o acervo histórico local. O GPT online encerrou o acesso temporário da Sala
+Secreta; a auditoria de 2026-09-21 confirmou **zero Knowledge e zero Actions**.
+Esta distribuição não reabre nem altera o GPT.
 
-Este repositório é a fonte de verdade do agente existente. Profiles e adapters
-apenas recortam ou traduzem seu núcleo canônico; não redefinem o comportamento.
+| Perfil | Quando usar |
+| --- | --- |
+| `restored-technical` | Padrão para orientação técnica, cenários e comunicação com clientes; usa oito originais e vinte fichas preservadas, com verificação de fontes e dados. |
+| `current-closed` | Reprodução/auditoria do GPT encerrado; somente aviso e link exato para Lucas. |
+| `legacy-action` | Integração histórica opcional, somente após health check real; indisponibilidade leva ao Knowledge local. |
+
+O entrypoint é [SKILL.md](SKILL.md). Os perfis técnicos podem explicar, organizar
+hipóteses e propor próximos passos sem a Action. Não fecham cálculo, regime ou
+classificação sem dados e fontes suficientes. Os dois schemas preservados não
+comprovam integração ativa. A versão é candidata; instalação e testes funcionais
+independentes ainda são gates de validação.
+
+## Instalação seletiva
+
+Instale em uma pasta `ac-reforma-tributaria` no diretório de skills do Codex,
+copiando somente `SKILL.md`, `agent.yaml`, `agents/`, `profiles/`, `references/`,
+`instructions/`, `knowledge/`, `connectors/`, `identity/` e `objectives/`.
+Não copie Git, `.superpowers/`, avaliações, relatórios, governança, testes,
+validadores, docs de manutenção ou `.gitkeep`; não use symlinks para a worktree.
+Veja [o procedimento e a verificação](HOW-TO-USE.md#instalação-seletiva-no-codex).
+
+Exemplo: “Use `$ac-reforma-tributaria` para organizar os dados necessários à
+comparação de regimes deste cliente.” A seleção implícita está habilitada.
 
 ## Usar e manter este agente
 
-1. Leia `objectives/`, `identity/` e `instructions/` antes de operar ou alterar o
-   agente; esses diretórios definem missão, papel, comportamento e limites.
+1. Para operar a skill, leia `SKILL.md` e as referências do perfil escolhido.
+   Para manutenção, consulte também o núcleo histórico em `objectives/`,
+   `identity/` e `instructions/`, preservando suas capturas originais.
 2. Para reconstruir ou adaptar esta versão, siga `HOW-TO-USE.md` e use
    `agent.yaml` como índice dos componentes canônicos.
-3. Registre novas capacidades em `skills/`, fontes curadas em `knowledge/` e
+3. Registre fontes curadas em `knowledge/` e
    contratos externos em `connectors/`; nunca registre credenciais.
 4. Adicione avaliações para cada mudança comportamental e execute:
 
