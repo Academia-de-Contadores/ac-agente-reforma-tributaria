@@ -29,17 +29,26 @@ cp -R "$root/." "$fixture/"
 rm -rf "$fixture/.git"
 mkdir -p "$fixture/profiles/validation-fixture" \
   "$fixture/adapters/validation-fixture"
+fixture_agent_version="$(awk '
+  /^agent:/ { in_agent = 1; next }
+  in_agent && /^[^[:space:]]/ { exit }
+  in_agent && /^  version:/ { print $2; exit }
+' "$fixture/agent.yaml")"
+test -n "$fixture_agent_version"
 printf '%s\n' \
   'schema_version: 1' \
   'name: validation-fixture' \
-  'canonical_agent_version: 0.1.0' \
+  "canonical_agent_version: $fixture_agent_version" \
   > "$fixture/profiles/validation-fixture/profile.yaml"
 printf '%s\n' \
   'schema_version: 1' \
   'name: validation-fixture' \
-  'canonical_agent_version: 0.1.0' \
+  "canonical_agent_version: $fixture_agent_version" \
   'target: validation-fixture' \
   > "$fixture/adapters/validation-fixture/adapter.yaml"
+
+# A valid baseline prevents unrelated fixture failures masking negative cases.
+bash "$fixture/scripts/validate-agent-repo.sh" >/dev/null
 
 expect_rejected() {
   local name="$1"
