@@ -3,7 +3,7 @@ agent:
   id: ac.reforma-tributaria
   name: Agente da Reforma Tributária Oficial
   version: 0.2.0
-  lifecycle: candidate
+  lifecycle: validated
   owners:
     - Academia-de-Contadores
 catalog:
@@ -72,6 +72,9 @@ evaluations:
   - evaluations/parity/questions.yaml
   - evaluations/parity/install-validation-2026-09-21.md
   - evaluations/parity/local-results-2026-09-21.md
+  - evaluations/parity/gpt-outputs-2026-09-21.md
+  - evaluations/parity/gpt-comparison-2026-09-21.md
+  - evaluations/parity/original-source-verification-2026-09-21.md
 profiles:
   - profiles/current-closed/profile.yaml
   - profiles/restored-technical/profile.yaml
