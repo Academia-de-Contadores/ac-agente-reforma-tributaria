@@ -69,6 +69,9 @@ evaluations:
   - evaluations/regression/H2.md
   - evaluations/regression/H3.md
   - evaluations/regression/C1.md
+  - evaluations/parity/questions.yaml
+  - evaluations/parity/install-validation-2026-09-21.md
+  - evaluations/parity/local-results-2026-09-21.md
 profiles:
   - profiles/current-closed/profile.yaml
   - profiles/restored-technical/profile.yaml
