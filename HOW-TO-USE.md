@@ -58,7 +58,8 @@ Gate A 2/2, Gate B 5/5, verificação de fontes/originais e revisão independent
 sem achados Critical/Important. Esses gates sustentam o lifecycle `validated` e
 estão documentados em `evaluations/parity/`.
 
-Push, pull request e merge são gates externos posteriores e continuam pendentes.
+Publicação e distribuição são gates externos: use somente um commit validado que
+esteja em `main` ou em uma tag/release aprovada, e confira o hash após instalar.
 O estado `validated` não afirma que a branch já foi publicada ou integrada a
 `main`.
 

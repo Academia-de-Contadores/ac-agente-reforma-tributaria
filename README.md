@@ -29,8 +29,9 @@ Gates A (2/2) e B (5/5), pela verificação de fontes/originais e pela revisão
 independente com zero achados Critical/Important. As evidências estão em
 `evaluations/parity/`.
 
-Essa validação local não é publicação: o push da branch, a abertura do pull
-request e o merge continuam pendentes e não foram executados neste repositório.
+O lifecycle `validated` descreve os gates técnicos e não, por si só, o canal de
+distribuição. Para produção, confirme que o commit validado está em `main` ou em
+uma tag/release aprovada e que a instalação aponta exatamente para esse commit.
 
 ## Instalação seletiva
 
